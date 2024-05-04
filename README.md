@@ -65,5 +65,16 @@ pip install fairlearn
 
 We use the five default datasets supported by the AIF360 toolkit. **When running the scripts that invoke these datasets, you will be prompted how to download these datasets and in which folders they need to be placed.** You can also refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
 
+## Step-by-step Guide
+You can also reproduce the results from scratch. We provide a step-by-step guide on how to reproduce the intermediate results.
 
+We can obtain the original ML performance and fairness metric values by running `default.py.` `default.py` supports three arguments: `-d` configures the dataset; `-c` configures the ML algorithm; `-p` configures the protected attribute.
+```
+cd scouce_code_path
+python default.py -d adult -c lr -p sex
+python default.py -d adult -c lr -p race
+python default.py -d german -c lr -p sex
+python default.py -d german -c lr -p age
+python default.py -d bank -c lr -p age
+```
 
