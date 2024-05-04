@@ -95,5 +95,54 @@ python rw.py -d german -c lr -p sex
 python rw.py -d german -c lr -p age
 python rw.py -d bank -c lr -p age
 
-```
+python default.py -d adult -c rf -p sex
+python default.py -d adult -c rf -p race
+python default.py -d german -c rf -p sex
+python default.py -d german -c rf -p age
+python default.py -d bank -c rf -p age
 
+python maat.py -d adult -c rf -p sex
+python maat.py -d adult -c rf -p race
+python maat.py -d german -c rf -p sex
+python maat.py -d german -c rf -p age
+python maat.py -d bank -c rf -p age
+
+python mirror_fair.py -d adult -c rf -p sex
+python mirror_fair.py -d adult -c rf -p race
+python mirror_fair.py -d german -c rf -p sex
+python mirror_fair.py -d german -c rf -p age
+python mirror_fair.py -d bank -c rf -p age
+
+python rw.py -d adult -c rf -p sex
+python rw.py -d adult -c rf -p race
+python rw.py -d german -c rf -p sex
+python rw.py -d german -c rf -p age
+python rw.py -d bank -c rf -p age
+
+python default.py -d adult -c svm -p sex
+python default.py -d adult -c svm -p race
+python default.py -d german -c svm -p sex
+python default.py -d german -c svm -p age
+python default.py -d bank -c svm -p age
+
+python maat.py -d adult -c svm -p sex
+python maat.py -d adult -c svm -p race
+python maat.py -d german -c svm -p sex
+python maat.py -d german -c svm -p age
+python maat.py -d bank -c svm -p age
+
+python mirror_fair.py -d adult -c svm -p sex
+python mirror_fair.py -d adult -c svm -p race
+python mirror_fair.py -d german -c svm -p sex
+python mirror_fair.py -d german -c svm -p age
+python mirror_fair.py -d bank -c svm -p age
+
+python rw.py -d adult -c svm -p sex
+python rw.py -d adult -c svm -p race
+python rw.py -d german -c svm -p sex
+python rw.py -d german -c svm -p age
+python rw.py -d bank -c svm -p age
+
+```
+### About the Results
+As a result, we can obtain the results of 15 (dataset, protected attribute, ML algorithm) combinations. The result for each combination is included in the `results/` folder. For example, in this folder, `maat_lr_adult_sex.txt` contains the results of MAAT for the (adult, sex, lr) combination. Each file in the folder has 53 columns, with the first column indicating the ML performance or fairness metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
