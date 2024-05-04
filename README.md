@@ -76,5 +76,24 @@ python default.py -d adult -c lr -p race
 python default.py -d german -c lr -p sex
 python default.py -d german -c lr -p age
 python default.py -d bank -c lr -p age
+
+python maat.py -d adult -c lr -p sex
+python maat.py -d adult -c lr -p race
+python maat.py -d german -c lr -p sex
+python maat.py -d german -c lr -p age
+python maat.py -d bank -c lr -p age
+
+python mirror_fair.py -d adult -c lr -p sex
+python mirror_fair.py -d adult -c lr -p race
+python mirror_fair.py -d german -c lr -p sex
+python mirror_fair.py -d german -c lr -p age
+python mirror_fair.py -d bank -c lr -p age
+
+python rw.py -d adult -c lr -p sex
+python rw.py -d adult -c lr -p race
+python rw.py -d german -c lr -p sex
+python rw.py -d german -c lr -p age
+python rw.py -d bank -c lr -p age
+
 ```
 
