@@ -63,7 +63,7 @@ pip install fairlearn
 
 ## Dataset
 
-We use the five default datasets supported by the AIF360 toolkit. **When running the scripts that invoke these datasets, you will be prompted how to download these datasets and in which folders they need to be placed.** You can also refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
+We use the three benchmark datasets (e.g., Adult Census Income, German Credit, and Bank Marketing datasets) supported by the AIF360 toolkit. **When running the scripts that invoke these datasets, you will be prompted how to download these datasets and in which folders they need to be placed.** You can also refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
 
 ## Step-by-step Guide
 You can also reproduce the results from scratch. We provide a step-by-step guide on how to reproduce the intermediate results.
