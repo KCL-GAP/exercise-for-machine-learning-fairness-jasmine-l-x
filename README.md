@@ -1,6 +1,8 @@
 # Fairness-Experiment-Tutorial
-This is a tutorial for machine learning model fairness testing and mitigation.
+This repository is a tutorial for machine learning model fairness testing and mitigation. We provide the datasets and source code to help the students evaluate the fairness of the machine learning models and mitigate model bias using three common bias-mitigating methods.
 
+## To do
+The students need to install the experimental environment correctly and download the file from this repository to a local device to conduct the experiment. The only code students need to program is to open the file "Measure_new" and fill up the three blanks (based on the document of IBM AIF360) that calculate the three fairness metrics values.
 
 ## Experimental environment
 
@@ -146,3 +148,6 @@ python rw.py -d bank -c svm -p age
 ```
 ### About the Results
 As a result, we can obtain the results of 15 (dataset, protected attribute, ML algorithm) combinations. The result for each combination is included in the `results/` folder. For example, in this folder, `maat_lr_adult_sex.txt` contains the results of MAAT for the (adult, sex, lr) combination. Each file in the folder has 53 columns, with the first column indicating the ML performance or fairness metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
+
+## Discussion
+Which of the three fairness metrics, SPD, AOD, and EOD, is better?
