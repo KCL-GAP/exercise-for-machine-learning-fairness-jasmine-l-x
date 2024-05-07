@@ -1,12 +1,13 @@
-# Fairness-Experiment-Tutorial
-This repository is a tutorial for machine learning model fairness testing and mitigation. We provide the datasets and source code to help the students evaluate the fairness of the machine learning models and mitigate model bias using three common bias-mitigating methods.
+# Fairness-Excercise
+This repository is an assignment for the course "AI and Robotics Group Project" Week 10: Ethical and Trustworthy AI at King's College London. The assignment is about machine learning fairness measurement and mitigation. This repo provides the datasets and source code to help the students evaluate the fairness of the machine learning models and mitigate model bias using three existing common bias-mitigating methods.
 
-## To do
-The students need to install the experimental environment correctly and download the file from this repository to a local device to conduct the experiment. The only code students need to program is to open the file "Measure_new" and fill up the three blanks (based on the document of IBM AIF360) that calculate the three fairness metrics values.
+## Task
+The students need to install the experimental environment correctly and download the file from this repository to a local device to conduct the experiment. The coding task for you is to open the file "Measure_new" and fill in the three blanks (based on the document of IBM AIF360: https://aif360.res.ibm.com/) to calculate the three fairness metrics values.
 
 ## Experimental environment
 
-We use Python 3.7 for our experiments. We use the IBM AI Fairness 360 (AIF360) toolkit to implement bias mitigation methods and compute fairness metrics. 
+Python version: >= Python 3.7 
+Toolkit: IBM AI Fairness 360 (AIF360) 
 
 Installation instructions for Python 3.7 and AIF360 can be found at https://github.com/Trusted-AI/AIF360. That page provides several ways to install it. We recommend creating a virtual environment for it (as shown below), because AIF360 requires specific versions of many Python packages which may conflict with other projects on your system. If you would like to try other installation methods or encounter any errors during the installation process, please refer to the page (https://github.com/Trusted-AI/AIF360) for help.
 
@@ -65,7 +66,7 @@ pip install fairlearn
 
 ## Dataset
 
-We use the three benchmark datasets (e.g., Adult Census Income, German Credit, and Bank Marketing datasets) supported by the AIF360 toolkit. **When running the scripts that invoke these datasets, you will be prompted how to download these datasets and in which folders they need to be placed.** You can also refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
+Please use the three benchmark datasets (e.g., Adult Census Income, German Credit, and Bank Marketing datasets) supported by the AIF360 toolkit. **When running the scripts that invoke these datasets, you will be prompted how to download these datasets and in which folders they need to be placed.** You can also refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
 
 ## Step-by-step Guide
 You can also reproduce the results from scratch. We provide a step-by-step guide on how to reproduce the intermediate results.
@@ -147,7 +148,5 @@ python rw.py -d bank -c svm -p age
 
 ```
 ### About the Results
-As a result, we can obtain the results of 15 (dataset, protected attribute, ML algorithm) combinations. The result for each combination is included in the `results/` folder. For example, in this folder, `maat_lr_adult_sex.txt` contains the results of MAAT for the (adult, sex, lr) combination. Each file in the folder has 53 columns, with the first column indicating the ML performance or fairness metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
+After these steps, you can obtain the results of 15 (dataset, protected attribute, ML algorithm) combinations. The result for each combination is included in the `results/` folder. For example, in this folder, `maat_lr_adult_sex.txt` contains the results of MAAT for the (adult, sex, lr) combination. Each file in the folder has 53 columns, with the first column indicating the ML performance or fairness metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
 
-## Discussion
-Are SPD, AOD, and EOD good fairness metrics?
